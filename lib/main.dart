@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'controller/translation.dart';
 import 'view/home_screen.dart';
 
 void main() {
@@ -13,10 +12,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      defaultTransition: Transition.native,
-      translations: MyTranslations(),
-      locale: const Locale('en', 'US'),
+    return const GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       home: HomeScreen(),
     );
   }
